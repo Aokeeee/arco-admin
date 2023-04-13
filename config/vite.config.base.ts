@@ -1,8 +1,8 @@
-import { resolve } from 'path'
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
-import configArcoStyleImportPlugin from './plugin/arcoStyleImport'
+import configArcoStyleImportPlugin from './plugin/arcoStyleImport';
 
 export default defineConfig({
   plugins: [vue(), configArcoStyleImportPlugin()],
@@ -34,10 +34,12 @@ export default defineConfig({
     preprocessorOptions: {
       less: {
         modifyVars: {
-          hack: `true; @import (reference) "${resolve('src/assets/style/breakpoint.less')}";`,
+          hack: `true; @import (reference) "${resolve(
+            'src/assets/style/breakpoint.less'
+          )}";`,
         },
         javascriptEnabled: true,
       },
     },
   },
-})
+});

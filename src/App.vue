@@ -11,11 +11,10 @@
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-
   <HelloWorld />
 </template>
 
-<style scoped>
+<style scoped lang="less">
   .logo {
     height: 6em;
     padding: 1.5em;

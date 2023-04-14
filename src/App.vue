@@ -12,6 +12,8 @@
     </a>
   </div>
   <HelloWorld />
+
+  <el-input></el-input>
 </template>
 
 <style scoped lang="less">

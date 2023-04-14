@@ -2,14 +2,14 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 
-import configArcoStyleImportPlugin from './plugin/arcoStyleImport';
+import configElementPlusStyleImportPlugin from './plugin/elementStyleImport';
 
 export default defineConfig({
-  plugins: [vue(), configArcoStyleImportPlugin()],
+  plugins: [vue(), configElementPlusStyleImportPlugin()],
   resolve: {
     alias: [
       {
-        find: '@',
+        find: '@/',
         replacement: resolve(__dirname, '../src'),
       },
       {

@@ -9,7 +9,7 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: '@/',
+        find: '@',
         replacement: resolve(__dirname, '../src'),
       },
       {
@@ -32,14 +32,9 @@ export default defineConfig({
   },
   css: {
     preprocessorOptions: {
-      less: {
-        modifyVars: {
-          hack: `true; @import (reference) "${resolve(
-            'src/assets/style/breakpoint.less'
-          )}";`,
-        },
-        javascriptEnabled: true,
-      },
+      modifyVars: {},
+      javascriptEnabled: true,
+      additionalData: `@import "src/styles/var.less";`,
     },
   },
 });
